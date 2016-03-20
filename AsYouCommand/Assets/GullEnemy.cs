@@ -36,7 +36,7 @@ public class GullEnemy : MonoBehaviour {
         // else update
         else
         {
-            this.gameObject.transform.Translate(movement.x * Time.deltaTime, movement.y * Time.deltaTime * GameObject.Find("player").GetComponent<Player>().fallSpeed, movement.z);
+            this.gameObject.transform.Translate(movement.x * Time.deltaTime * (GameObject.Find("player").GetComponent<Player>().fallSpeed * 0.5f), movement.y * Time.deltaTime * GameObject.Find("player").GetComponent<Player>().fallSpeed, movement.z);
         }
 
     }
